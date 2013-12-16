@@ -2,7 +2,9 @@
 <resources>
 
     <string name="app_name">training_1</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_empty">Drop Table</string>
     <string name="hello_world">Hello world!</string>
-
+	<string name="menu_insert"> Add a note</string>
+	
+	<string name="saved_note_no">note_id</string>
 </resources>
