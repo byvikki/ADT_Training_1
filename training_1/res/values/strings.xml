@@ -4,7 +4,14 @@
     <string name="app_name">training_1</string>
     <string name="action_empty">Drop Table</string>
     <string name="hello_world">Hello world!</string>
-	<string name="menu_insert"> Add a note</string>
-	
-	<string name="saved_note_no">note_id</string>
+    <string name="menu_insert"> Add a note</string>
+    <string name="saved_note_no">note_id</string>
+    <string name="title_activity_edit">EditActivity</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- Note Form @edit mode -->
+    <string name="note_title">Title</string>
+    <string name="note_body">Body of Note</string>
+    <string name="note_confirm">Save Note</string>
+
 </resources>
