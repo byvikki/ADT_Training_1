@@ -1,18 +1,18 @@
 package com.app.training;
 
-import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.os.AsyncTask;
-import android.support.v4.widget.SimpleCursorAdapter;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MyBaseListActivity extends ListActivity {
+public class MyBaseListActivity extends FragmentActivity {
 
 	public SqlDbAdapter sDbHelper;
+	
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -30,13 +30,11 @@ public class MyBaseListActivity extends ListActivity {
 			return true;
 		case R.id.empty_database:
 			sDbHelper.dropTable();
-			fillData();
 			return true;
 		}
 		
 		return super.onOptionsItemSelected(item);
 	}
-	
 	
 	
 	public void createNoteWithForm(String formAction){
@@ -62,34 +60,5 @@ public class MyBaseListActivity extends ListActivity {
 	public SharedPreferences getSharedPrefs(){
 		return getSharedPreferences(MyBaseListActivity.class.getSimpleName(), Context.MODE_PRIVATE);
 	}
-
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public void fillData(){
-		
-		new AsyncTask(){
-
-			@Override
-			protected Cursor doInBackground(Object... params) {
-				// Will start a progress bar on here				
-				return sDbHelper.fetchAllNotes();
-			}
-			
-			@Override
-			protected void onPostExecute(Object cursor){
-				
-				// will stop the progress bar started at doInBackground
-				fillListWithData((Cursor)cursor);
-			}
-			
-		}.execute(null, null, null);
-		
-
-	}
 	
-	public void fillListWithData(Cursor cursor){
-		String[] from = new String[] { SqlDbAdapter.KEY_TITLE };
-		int[] to = new int[] { R.id.text1 };
-		SimpleCursorAdapter sCursor = new SimpleCursorAdapter(this, R.layout.list_row, cursor, from, to, 0);
-		setListAdapter(sCursor);
-	}
 }

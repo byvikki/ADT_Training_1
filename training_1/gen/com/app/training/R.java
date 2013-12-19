@@ -26,15 +26,17 @@ public final class R {
     public static final class id {
         public static final int body=0x7f080001;
         public static final int confirm=0x7f080002;
-        public static final int create_note=0x7f080004;
-        public static final int empty_database=0x7f080005;
-        public static final int text1=0x7f080003;
+        public static final int create_note=0x7f080005;
+        public static final int empty_database=0x7f080006;
+        public static final int fragment_container=0x7f080003;
+        public static final int text1=0x7f080004;
         public static final int title=0x7f080000;
     }
     public static final class layout {
         public static final int activity_edit=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int list_row=0x7f030002;
+        public static final int list_view=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;
