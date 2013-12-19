@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 public class MyListFragment extends ListFragment {
 	
-	public SqlDbAdapter sDbHelper;
+	private SqlDbAdapter sDbHelper;
 	
 	public SqlDbAdapter getsDbHelper() {
 		return sDbHelper;
