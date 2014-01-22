@@ -22,13 +22,22 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int levis=0x7f020001;
+        public static final int on=0x7f020002;
+        public static final int rectangle=0x7f020003;
+        public static final int status_on=0x7f020004;
+        public static final int triangle=0x7f020005;
+        public static final int zig_zag_strip=0x7f020006;
     }
     public static final class id {
         public static final int body=0x7f080001;
         public static final int confirm=0x7f080002;
-        public static final int create_note=0x7f080005;
-        public static final int empty_database=0x7f080006;
+        public static final int create_note=0x7f080008;
+        public static final int empty_database=0x7f080009;
         public static final int fragment_container=0x7f080003;
+        public static final int progressBar1=0x7f080006;
+        public static final int round_image=0x7f080005;
+        public static final int show_pic=0x7f080007;
         public static final int text1=0x7f080004;
         public static final int title=0x7f080000;
     }
